@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Sections</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+    color: rgb(0, 115, 107);
+}
+
+.new{
+    background-color: rgb(255, 220, 174);
+    width: fit-content;
+    margin: auto;
+    padding: 40px;
+    border-radius: 20px;
+}
+
+button {
+    padding: 8px 20px;
+    margin: 5px;
+    font-size: 20px;
+    border-radius: 8px;
+    border: 2px solid rgb(0, 193, 180);
+    background-color: aliceblue;
+    box-sizing: 1px;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: beige;
+    box-shadow: 1px 2px 3px 0px;
+}
+
+.sec p{
+    font-size: large;
+}
+
+.section {
+    margin-top: 20px;
+    text-align: center;
+    display: flex;
+}
+
+.section img {
+    width: 100%;
+    max-width: 300px;
+    margin: 10px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.section img:hover {
+    transform: scale(1.1);
+}
+
+.onoff{
+    color:rgb(0, 0, 0);
+    background-color: rgb(79, 222, 88);
+    font-weight: 600;
+}
+
+    </style>
+</head>
+<body>
+
+<h1>Hand gesture based application controller using computer vision</h1>
+
+<div class="new">
+    <button onclick="showSection('car')">Car</button>
+    <button onclick="showSection('mouse')">Mouse</button>
+    <button onclick="showSection('media')">Media</button>
+    <button onclick="showSection('ppt')">PPT</button><br>
+    <button class="onoff">GO</button>
+    <button class="onoff" id="off">STOP</button>
+
+<div id="carSection" class="section">
+    <div class="sec"><img src="static\straight.gif" alt="Car GIF 1"><p>Straight</p></div>
+    <div class="sec"><img src="static\left.gif" alt="Car GIF 2"><p>Left</p></div>
+    <div class="sec"><img src="static\right.gif" alt="Car GIF 2"><p>Right</p></div>
+    <div class="sec"><img src="static\brake.gif" alt="Car GIF 2"><p>Brakes are applied</p></div>
+</div>
+
+<div id="mouseSection" class="section">
+    <div class="sec"><img src="static\left.gif" alt="Mouse GIF 1"></div>
+    <div class="sec"><img src="static\right.gif" alt="Mouse GIF 2"></div>
+</div>
+
+<div id="mediaSection" class="section">
+    <div class="sec"><img src="static\left.gif" alt="Media GIF 1"></div>
+    <div class="sec"><img src="static\right.gif" alt="Media GIF 2"></div>
+</div>
+
+<div id="pptSection" class="section">
+    <div><img src="static\previous.gif" alt="PPT GIF 1"><p>Previous</p></div>
+    <div><img src="static\next.gif" alt="PPT GIF 2"><p>Next</p></div>
+    <div><img src="static\fullscreen.gif" alt="PPT GIF 2"><p>Fullscreen</p></div>
+</div>
+</div>
+
+<script>
+     function hideAllSections() {
+        document.querySelectorAll('.section').forEach(function (element) {
+            element.style.display = 'none';
+        });
+    }
+
+    function showSection(section) {
+        hideAllSections();
+        document.getElementById(section + 'Section').style.display = 'block';
+    }
+
+    function executeFunction(section) {
+        switch (section) {
+            case 'car':
+                // Call the GoCar function or perform Car-related actions
+                console.log('Executing GoCar function');
+                executePythonScript('steeringwheel.py');
+                break;
+            case 'mouse':
+                // Call the GoMouse function or perform Mouse-related actions
+                console.log('Executing GoMouse function');
+                break;
+            case 'media':
+                // Call the GoMedia function or perform Media-related actions
+                console.log('Executing GoMedia function');
+                break;
+            case 'ppt':
+                // Call the GoPPT function or perform PPT-related actions
+                console.log('Executing GoPPT function');
+                break;
+            default:
+                console.log('Invalid section');
+        }
+    }
+
+    function executePythonScript(scriptPath) {
+        fetch(`/run-script?script=${scriptPath}`)
+            .then(response => response.json())
+            .then(data => console.log(data))
+            .catch(error => console.error(error));
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+        document.querySelector('.onoff').addEventListener('click', function () {
+            // Get the currently active section
+            const activeSection = document.querySelector('.section:not([style*="display: none"])').id.replace('Section', '');
+            // Execute the corresponding function for the active section
+            executeFunction(activeSection);
+        });
+    });
+
+    document.querySelector('#off').addEventListener('click', function () {
+    // Call the terminate_steering_wheel function here
+    document.querySelector('#off').disabled = true;
+});
+</script>
+
+</body>
+</html>
