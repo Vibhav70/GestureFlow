@@ -4,10 +4,11 @@ import handtrackinmodule as htm
 import time 
 import mouse
 import pyautogui
+import pydirectinput
 
 def mouse():
     wCam , hCam = 640, 480
-    frameR = 100
+    frameR = 150
     smoothening = 7
 
     pTime = 0
@@ -59,7 +60,12 @@ def mouse():
                 cv2.circle(img,(lineInfo[4],lineInfo[5]),
                         15, (0,255,0), cv2.FILLED)
                 pyautogui.click()
-
+        
+        if fingers[0] == 0 and fingers[1] ==0  and fingers[2]==0 and fingers[3]==0:
+            pyautogui.press("down")
+        
+        if fingers[0] == 0 and fingers[1] ==0  and fingers[2]==0 and fingers[3]==1:
+            pyautogui.press("up")
         cTime = time.time()
         fps = 1 / (cTime - pTime)
         pTime = cTime

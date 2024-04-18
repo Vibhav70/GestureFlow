@@ -70,6 +70,8 @@ def steering_wheel():
                             pydirectinput.keyUp('w')
                             pydirectinput.keyUp('a')
                             pydirectinput.keyDown('d')
+                            
+                            
                     if abs(slope) < sensitivity:
                         if min(left_finger_tips_y) > left_thumb_tip[1] and min(right_finger_tips_y) > right_thumb_tip[1]:
                             print("Thumbs-up detected. Applying brake.")

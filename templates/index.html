@@ -1,172 +1,283 @@
 <!DOCTYPE html>
-<html lang="en">
+<!--
+	Stellar by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dynamic Sections</title>
-    <style>
-        body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
-    text-align: center;
-}
-
-h1 {
-    text-align: center;
-    color: rgb(0, 115, 107);
-}
-
-.new{
-    background-color: rgb(255, 220, 174);
-    width: fit-content;
-    margin: auto;
-    padding: 40px;
-    border-radius: 20px;
-}
-
-button {
-    padding: 8px 20px;
-    margin: 5px;
-    font-size: 20px;
-    border-radius: 8px;
-    border: 2px solid rgb(0, 193, 180);
-    background-color: aliceblue;
-    box-sizing: 1px;
-    cursor: pointer;
-}
-
-button:hover{
-    background-color: beige;
-    box-shadow: 1px 2px 3px 0px;
-}
-
-.sec p{
-    font-size: large;
-}
-
-.section {
-    margin-top: 20px;
-    text-align: center;
-    display: flex;
-}
-
-.section img {
-    width: 100%;
-    max-width: 300px;
-    margin: 10px;
-    border: 2px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
-}
-
-.section img:hover {
-    transform: scale(1.1);
-}
-
-.onoff{
-    color:rgb(0, 0, 0);
-    background-color: rgb(79, 222, 88);
-    font-weight: 600;
-}
-
-    </style>
+  <title>Stellar by HTML5 UP</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <link rel="stylesheet" href="../static/assets/css/main.css" />
+  <noscript>
+    <link rel="stylesheet" href="../static/assets/css/noscript.css" />
+  </noscript>
 </head>
-<body>
 
-<h1>Hand gesture based application controller using computer vision</h1>
+<body class="is-preload">
+  <!-- Wrapper -->
+  <div id="wrapper">
+    <!-- Header -->
+    <header id="header" class="alt">
+      <span class="logo"><img src="../static/images/logo.svg" alt="" /></span>
+      <h2>Application Controller Using OpenCV</h2>
+      <h3>built by Vibhav</h3>
+    </header>
 
-<div class="new">
-    <button onclick="showSection('car')">Car</button>
-    <button onclick="showSection('mouse')">Mouse</button>
-    <button onclick="showSection('media')">Media</button>
-    <button onclick="showSection('ppt')">PPT</button><br>
-    <button class="onoff">GO</button>
-    <button class="onoff" id="off">STOP</button>
+    <!-- Nav -->
+    <nav id="nav">
+      <ul>
+        <li><a href="#intro" class="active">Introduction</a></li>
+        <li><a href="#first">First Section</a></li>
+        <li><a href="#second">Second Section</a></li>
+        <li><a href="#cta">Get Started</a></li>
+      </ul>
+    </nav>
 
-<div id="carSection" class="section">
-    <div class="sec"><img src="static\straight.gif" alt="Car GIF 1"><p>Straight</p></div>
-    <div class="sec"><img src="static\left.gif" alt="Car GIF 2"><p>Left</p></div>
-    <div class="sec"><img src="static\right.gif" alt="Car GIF 2"><p>Right</p></div>
-    <div class="sec"><img src="static\brake.gif" alt="Car GIF 2"><p>Brakes are applied</p></div>
-</div>
+    <!-- Main -->
+    <div id="main">
+      <!-- Introduction -->
+      <section id="intro" class="main">
+        <div class="spotlight">
+          <div class="content">
+            <header class="major">
+              <h2>Introduction</h2>
+            </header>
+            <p>
+              This site is designed so that you can easily use the controllers
+              i made using mediapipe and OpenCv on any device from anywhere at
+              anytime.<br />
+              I have designed three types of controller : Mouse, Media and
+              Racing game.
+            </p>
+            <!-- <ul class="actions">
+											<li><a href="generic.html" class="button">Learn More</a></li>
+										</ul> -->
+          </div>
+          <span class="image"><img src="../static/images/pic01.jpg" alt="" /></span>
+        </div>
+      </section>
 
-<div id="mouseSection" class="section">
-    <div class="sec"><img src="static\left.gif" alt="Mouse GIF 1"></div>
-    <div class="sec"><img src="static\right.gif" alt="Mouse GIF 2"></div>
-</div>
+      <!-- First Section -->
+      <section id="mouseSection" class="main special section">
+        <header class="major">
+          <h2>Mouse Pointer</h2>
+        </header>
+        <ul class="features">
+          <li>
+            <span class="icon solid major style1 fa-code"></span>
+            <h3>Move Pointer</h3>
+          </li>
+          <li>
+            <span class="icon major style3 fa-copy"></span>
+            <h3>Click</h3>
+          </li>
+          <li>
+            <span class="icon major style5 fa-gem"></span>
+            <h3>Scroll Up</h3>
+          </li>
+          <li>
+            <span class="icon major style5 fa-gem"></span>
+            <h3>Scroll Down</h3>
+          </li>
+        </ul>
+        <footer class="major">
+          <ul class="actions special">
+            <li><button class="onoff">Press To Run</button></li>
+          </ul>
+        </footer>
+      </section>
 
-<div id="mediaSection" class="section">
-    <div class="sec"><img src="static\left.gif" alt="Media GIF 1"></div>
-    <div class="sec"><img src="static\right.gif" alt="Media GIF 2"></div>
-</div>
+      <!-- Second Section -->
+      <section id="carSection" class="main special section">
+        <header class="major">
+          <h2>Racing Game Controller</h2>
+        </header>
+        <ul class="features">
+          <li>
+            <span class="icon solid major style1 fa-code"></span>
+            <h3>Go Straight</h3>
+          </li>
+          <li>
+            <span class="icon major style3 fa-copy"></span>
+            <h3>Turn Left</h3>
+          </li>
+          <li>
+            <span class="icon major style5 fa-gem"></span>
+            <h3>Turn Right</h3>
+          </li>
+          <li>
+            <span class="icon major style5 fa-gem"></span>
+            <h3>Brakes Applied</h3>
+          </li>
+        </ul>
 
-<div id="pptSection" class="section">
-    <div><img src="static\previous.gif" alt="PPT GIF 1"><p>Previous</p></div>
-    <div><img src="static\next.gif" alt="PPT GIF 2"><p>Next</p></div>
-    <div><img src="static\fullscreen.gif" alt="PPT GIF 2"><p>Fullscreen</p></div>
-</div>
-</div>
+        <footer class="major">
+          <ul class="actions special">
+            <li>
+            <li><button class="onoff">Press To Run</button></li>
+            </li>
+          </ul>
+        </footer>
+      </section>
+      <!-- Third Section -->
+      <section id="mediaSection" class="main special section">
+        <header class="major">
+          <h2>Media Player</h2>
+        </header>
+        <ul class="features1">
+          <li>
+            <span class="icon solid major style1 fa-code"></span>
+            <h3>Play/Pause</h3>
+          </li>
+          <li>
+            <span class="icon major style3 fa-copy"></span>
+            <h3>Volume Up</h3>
+          </li>
+          <li>
+            <span class="icon major style5 fa-gem"></span>
+            <h3>Volume Down</h3>
+          </li>
+          <li>
+            <span class="icon major style5 fa-gem"></span>
+            <h3>Forward</h3>
+          </li>
+          <li>
+            <span class="icon major style5 fa-gem"></span>
+            <h3>Backward</h3>
+          </li>
+        </ul>
+        <footer class="major">
+          <ul class="actions special">
+            <li><button class="onoff">Press To Run</button></li>
+          </ul>
+        </footer>
+      </section>
+      <!-- Get Started -->
+      <section id="cta" class="main special">
+        <header class="major">
+          <h2>Demo</h2>
+          <p>Here is a small video of my application controller.</p>
+        </header>
+        <footer class="major"></footer>
+      </section>
+    </div>
 
-<script>
-     function hideAllSections() {
-        document.querySelectorAll('.section').forEach(function (element) {
-            element.style.display = 'none';
-        });
-    }
+    <script>
 
-    function showSection(section) {
-        hideAllSections();
-        document.getElementById(section + 'Section').style.display = 'block';
-    }
-
-    function executeFunction(section) {
+      function executeFunction(section) {
         switch (section) {
-            case 'car':
-                // Call the GoCar function or perform Car-related actions
-                console.log('Executing GoCar function');
-                executePythonScript('steeringwheel.py');
-                break;
-            case 'mouse':
-                // Call the GoMouse function or perform Mouse-related actions
-                console.log('Executing GoMouse function');
-                executePythonScript('mouse.py');
-                break;
-            case 'media':
-                // Call the GoMedia function or perform Media-related actions
-                console.log('Executing GoMedia function');
-                executePythonScript('mediaplayer.py')
-                break;
-            case 'ppt':
-                // Call the GoPPT function or perform PPT-related actions
-                console.log('Executing GoPPT function');
-                break;
-            default:
-                console.log('Invalid section');
+          case "mouse":
+            // Call the GoMouse function or perform Mouse-related actions
+            console.log("Executing GoMouse function");
+            executePythonScript("mouse.py");
+            break;
+          case "car":
+            // Call the GoCar function or perform Car-related actions
+            console.log("Executing GoCar function");
+            executePythonScript("steeringwheel.py");
+            break;
+          case "media":
+            // Call the GoMedia function or perform Media-related actions
+            console.log("Executing GoMedia function");
+            executePythonScript("mediaplayer.py");
+            break;
+          default:
+            console.log("Invalid section");
         }
-    }
+      }
 
-    function executePythonScript(scriptPath) {
+      function executePythonScript(scriptPath) {
         fetch(`/run-script?script=${scriptPath}`)
-            .then(response => response.json())
-            .then(data => console.log(data))
-            .catch(error => console.error(error));
-    }
+          .then((response) => response.json())
+          .then((data) => console.log(data))
+          .catch((error) => console.error(error));
+      }
 
-    document.addEventListener('DOMContentLoaded', function () {
-        document.querySelector('.onoff').addEventListener('click', function () {
-            // Get the currently active section
-            const activeSection = document.querySelector('.section:not([style*="display: none"])').id.replace('Section', '');
-            // Execute the corresponding function for the active section
-            executeFunction(activeSection);
+      document.addEventListener("DOMContentLoaded", function () {
+        const onOffBtns = document.querySelectorAll(".onoff");
+
+        onOffBtns.forEach(btn => {
+          btn.addEventListener("click", function () {
+            // Get the closest ancestor section element
+            const section = btn.closest("section");
+            if (section) {
+              // Extract the section ID
+              const activeSection = section.id.replace("Section", "");
+              // Execute the corresponding function for the active section
+              executeFunction(activeSection);
+            } else {
+              console.log("Error: Section not found");
+            }
+          });
         });
-    });
+      });
 
-    document.querySelector('#off').addEventListener('click', function () {
-    // Call the terminate_steering_wheel function here
-    document.querySelector('#off').disabled = true;
-});
-</script>
 
+      // document.querySelector("#off").addEventListener("click", function () {
+      //   // Call the terminate_steering_wheel function here
+      //   document.querySelector("#off").disabled = true;
+      // });
+    </script>
+
+    <!-- Footer -->
+    <footer id="footer">
+      <section>
+        <h2>Aliquam sed mauris</h2>
+        <p>
+          Sed lorem ipsum dolor sit amet et nullam consequat feugiat consequat
+          magna adipiscing tempus etiam dolore veroeros. eget dapibus mauris.
+          Cras aliquet, nisl ut viverra sollicitudin, ligula erat egestas
+          velit, vitae tincidunt odio.
+        </p>
+        <ul class="actions">
+          <li><a href="generic.html" class="button">Learn More</a></li>
+        </ul>
+      </section>
+      <section>
+        <h2>Etiam feugiat</h2>
+        <dl class="alt">
+          <dt>Address</dt>
+          <dd>1234 Somewhere Road &bull; Nashville, TN 00000 &bull; USA</dd>
+          <dt>Phone</dt>
+          <dd>(000) 000-0000 x 0000</dd>
+          <dt>Email</dt>
+          <dd><a href="#">information@untitled.tld</a></dd>
+        </dl>
+        <ul class="icons">
+          <li>
+            <a href="#" class="icon brands fa-twitter alt"><span class="label">Twitter</span></a>
+          </li>
+          <li>
+            <a href="#" class="icon brands fa-facebook-f alt"><span class="label">Facebook</span></a>
+          </li>
+          <li>
+            <a href="#" class="icon brands fa-instagram alt"><span class="label">Instagram</span></a>
+          </li>
+          <li>
+            <a href="#" class="icon brands fa-github alt"><span class="label">GitHub</span></a>
+          </li>
+          <li>
+            <a href="#" class="icon brands fa-dribbble alt"><span class="label">Dribbble</span></a>
+          </li>
+        </ul>
+      </section>
+      <p class="copyright">
+        &copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.
+      </p>
+    </footer>
+  </div>
+
+  <!-- Scripts -->
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/jquery.scrollex.min.js"></script>
+  <script src="assets/js/jquery.scrolly.min.js"></script>
+  <script src="assets/js/browser.min.js"></script>
+  <script src="assets/js/breakpoints.min.js"></script>
+  <script src="assets/js/util.js"></script>
+  <script src="assets/js/main.js"></script>
 </body>
+
 </html>
