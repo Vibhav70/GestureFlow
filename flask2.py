@@ -1,10 +1,9 @@
-# Import necessary modules
+
 from flask import Flask, render_template, request, jsonify
 import subprocess
 
 app = Flask(__name__)
 
-# Route to run the Python script
 @app.route('/run-script', methods=['GET'])
 def run_script():
     script_path = request.args.get('script')

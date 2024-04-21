@@ -57,16 +57,16 @@ def mediaplayer():
 
                 elif (end_time-start_time) > 0.2:
                     if (cnt == 1):
-                        pyautogui.press("")
+                        pyautogui.press("down")
                     
                     elif (cnt == 2):
-                        pyautogui.press("left")
-
-                    elif (cnt == 3):
                         pyautogui.press("up")
 
+                    elif (cnt == 3):
+                        pyautogui.press("right")
+
                     elif (cnt == 4):
-                        pyautogui.press("down")
+                        pyautogui.press("left")
 
                     elif (cnt == 5):
                         pyautogui.press("space")

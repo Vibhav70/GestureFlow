@@ -3824,3 +3824,11 @@ input, select, textarea {
 			}
 
 		}
+
+		.image-new{
+			width: 100%;
+			border-radius: 10px;
+			height: 300px;
+		}
+
+
