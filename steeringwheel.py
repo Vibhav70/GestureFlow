@@ -1,7 +1,7 @@
 import cv2
 import mediapipe as mp
-import pydirectinput
 import pyautogui
+
 
 cap = cv2.VideoCapture(0)
 cap.set(3, 300)
@@ -60,37 +60,37 @@ def steering_wheel():
                     if abs(slope) > sensitivity:
                         if slope < 0:
                             print("Turn left.")
-                            pydirectinput.keyUp('s')
-                            pydirectinput.keyUp("w")
-                            pydirectinput.keyUp('a')
-                            pydirectinput.keyDown('a')
+                            pyautogui.keyUp('s')
+                            pyautogui.keyUp("w")
+                            pyautogui.keyUp('a')
+                            pyautogui.keyDown('a')
                         if slope > 0:
                             print("Turn right.")
-                            pydirectinput.keyUp('s')
-                            pydirectinput.keyUp('w')
-                            pydirectinput.keyUp('a')
-                            pydirectinput.keyDown('d')
+                            pyautogui.keyUp('s')
+                            pyautogui.keyUp('w')
+                            pyautogui.keyUp('a')
+                            pyautogui.keyDown('d')
                             
                             
                     if abs(slope) < sensitivity:
                         if min(left_finger_tips_y) > left_thumb_tip[1] and min(right_finger_tips_y) > right_thumb_tip[1]:
                             print("Thumbs-up detected. Applying brake.")
                             brake_activated = True
-                            pydirectinput.keyUp('w')
-                            pydirectinput.keyUp('d')
-                            pydirectinput.keyUp('a')
-                            pydirectinput.keyDown('s')
+                            pyautogui.keyUp('w')
+                            pyautogui.keyUp('d')
+                            pyautogui.keyUp('a')
+                            pyautogui.keyDown('s')
                         else:
                             if brake_activated:
                                 print("Releasing brake.")
-                                pydirectinput.keyUp('s')
+                                pyautogui.keyUp('s')
                                 brake_activated = False
 
                             print("Keeping straight.")
-                            pydirectinput.keyUp('s')
-                            pydirectinput.keyUp('a')
-                            pydirectinput.keyUp('d')
-                            pydirectinput.keyDown('w')
+                            pyautogui.keyUp('s')
+                            pyautogui.keyUp('a')
+                            pyautogui.keyUp('d')
+                            pyautogui.keyDown('w')
 
             for hand_landmarks in landmarks:
                 mp_drawing.draw_landmarks(img_np, hand_landmarks, mp_hands.HAND_CONNECTIONS)
