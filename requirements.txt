@@ -3,4 +3,5 @@ Flask
 mediapipe                                    
 opencv-contrib-python                        
 opencv-python                                
-PyAutoGUI                                    
+PyAutoGUI    
+pydirectinput                                

@@ -4,7 +4,7 @@ import handtrackinmodule as htm
 import time 
 import mouse
 import pyautogui
-import pydirectinput
+
 
 def mouse():
     wCam , hCam = 640, 480
