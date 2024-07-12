@@ -1,17 +1,22 @@
-# Hand Gesture Control Project
+# Hand Gesture Control Project using OpenCV, MediaPipe, and PyAutoGUI
 
-## Overview
-This project utilizes OpenCV, MediaPipe, and PyAutoGUI to control various applications using hand gestures. It enables controlling the device's mouse, playing a car racing game, and managing media player functions through hand movements captured via a webcam.
-
-![Demo Image](demo_image.jpg) *(Replace with your actual demo image showcasing the project)*
+## Introduction
+This project utilizes OpenCV, MediaPipe, and PyAutoGUI to enable control of the device's mouse, a car racing game, and media player functions through hand gestures. It integrates these functionalities into a web application using Flask, showcasing real-time interaction with hand movements captured via a webcam.
 
 ## Features
-- **Mouse Control:** Move the mouse cursor by tracking hand movements.
-- **Car Racing Game:** Control the car's movement in a racing game using hand gestures.
-- **Media Player:** Play, pause, skip, and adjust volume in media players through specific hand gestures.
+- Control the device's mouse cursor using hand gestures.
+- Play a car racing game by steering with hand movements.
+- Manage media player functions such as play, pause, skip, and volume adjustment using specific hand gestures.
+
+## Technologies Used
+- OpenCV: Computer vision library for real-time image processing.
+- MediaPipe: Google's framework for building machine learning pipelines to process perceptual data, used here for hand tracking.
+- PyAutoGUI: Python library for programmatically controlling the mouse and keyboard.
+- Flask: Python web framework used to integrate Python scripts into a web application.
 
 ## Requirements
 - Python 3.x
+- Flask
 - OpenCV
 - MediaPipe
 - PyAutoGUI
