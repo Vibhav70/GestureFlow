@@ -24,6 +24,10 @@ This project utilizes OpenCV, MediaPipe, and PyAutoGUI to enable control of the 
 
 ## Installation
 1. **Clone the repository:**
+
+https://github.com/user-attachments/assets/199cf2e2-367f-4a89-99ee-056d42af8976
+
+
    ```bash
    git clone https://github.com/yourusername/hand-gesture-control.git
    cd hand-gesture-control
