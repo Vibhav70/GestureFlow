@@ -1,33 +1,67 @@
-# Hand Gesture Control Project using OpenCV, MediaPipe, and PyAutoGUI
+# GestureFlow  
+A Hand Gesture Control System using OpenCV, MediaPipe, and PyAutoGUI  
 
-## Introduction
-This project utilizes OpenCV, MediaPipe, and PyAutoGUI to enable control of the device's mouse, a car racing game, and media player functions through hand gestures. It integrates these functionalities into a web application using Flask, showcasing real-time interaction with hand movements captured via a webcam.
+## Introduction  
+**GestureFlow** is an innovative project that enables users to control various applications using hand gestures. By leveraging computer vision and machine learning, it allows users to interact with their devices in real time through a webcam. The system supports controlling a mouse, playing a car racing game, and managing media playback using natural hand movements.  
 
-## Features
-- Control the device's mouse cursor using hand gestures.
-- Play a car racing game by steering with hand movements.
-- Manage media player functions such as play, pause, skip, and volume adjustment using specific hand gestures.
+Additionally, as part of this project, a **custom racing game was developed in Unity**, featuring a map of my college. This game integrates gesture-based controls, allowing users to steer their vehicle using hand motions for an immersive experience.  
 
-## Technologies Used
-- OpenCV: Computer vision library for real-time image processing.
-- MediaPipe: Google's framework for building machine learning pipelines to process perceptual data, used here for hand tracking.
-- PyAutoGUI: Python library for programmatically controlling the mouse and keyboard.
-- Flask: Python web framework used to integrate Python scripts into a web application.
+## Features  
+- **Mouse Control**: Move the cursor, click, and scroll using hand gestures.  
+- **Car Racing Game Control**: Steer and accelerate a vehicle in a Unity-based racing game using hand movements.  
+- **Media Player Control**: Play, pause, adjust volume, and skip tracks using predefined gestures.  
+- **Web-Based Interface**: Integrated into a Flask-powered web application for a seamless user experience.  
 
-## Requirements
-- Python 3.x
-- Flask
-- OpenCV
-- MediaPipe
-- PyAutoGUI
-- NumPy
+## Technologies Used  
+- **OpenCV**: Real-time image processing and computer vision for detecting hand movements.  
+- **MediaPipe**: Google's AI-based framework for hand tracking and gesture recognition.  
+- **PyAutoGUI**: Automates mouse and keyboard actions based on recognized gestures.  
+- **Flask**: Enables web-based interaction with gesture recognition features.  
+- **Unity**: Used to design and develop a custom racing game featuring my college’s map.  
 
-## Installation
-1. **Clone the repository:**
+## Installation  
 
-https://github.com/user-attachments/assets/199cf2e2-367f-4a89-99ee-056d42af8976
+### Prerequisites  
+- Python 3.x  
+- Unity (for the racing game)  
+- Webcam for real-time gesture detection  
 
-
+### Setup Instructions  
+1. Clone the repository:  
    ```bash
-   git clone https://github.com/yourusername/hand-gesture-control.git
-   cd hand-gesture-control
+   git clone https://github.com/yourusername/GestureFlow.git
+   cd GestureFlow
+   ```  
+2. Install dependencies:  
+   ```bash
+   pip install opencv-python mediapipe pyautogui flask numpy
+   ```  
+3. Run the Flask application:  
+   ```bash
+   python app.py
+   ```  
+4. Open the application in your web browser and start using gesture controls!  
+
+## Usage  
+- **Mouse Control**:  
+  - Move your hand to control the cursor.  
+  - Pinch gesture for clicking.  
+  - Scroll by tilting your hand up or down.  
+- **Racing Game**:  
+  - Tilt hand left or right to steer.  
+  - Forward motion to accelerate.  
+  - Open palm to brake.  
+- **Media Player Controls**:  
+  - Thumbs-up: Play/Pause  
+  - Swipe left/right: Previous/Next track  
+  - Two-finger up/down: Volume control  
+
+## Future Enhancements  
+- Adding AI-based gesture customization for personalized controls.  
+- Enhancing the Unity racing game with more maps and multiplayer support.  
+- Expanding gesture support for additional applications like presentations and smart home controls.  
+
+## Acknowledgments  
+- OpenCV and MediaPipe for their robust computer vision and tracking capabilities.  
+- Flask for enabling a seamless web-based interface.  
+- Unity for providing an excellent game development environment.  
