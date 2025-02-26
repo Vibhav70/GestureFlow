@@ -54,7 +54,11 @@ Additionally, as part of this project, a **custom racing game was developed in U
 - **Media Player Controls**:  
   - Thumbs-up: Play/Pause  
   - Swipe left/right: Previous/Next track  
-  - Two-finger up/down: Volume control  
+  - Two-fin
+
+https://github.com/user-attachments/assets/47df9594-4e25-438e-99c3-ffc5af6a059d
+
+ger up/down: Volume control  
 
 ## Future Enhancements  
 - Adding AI-based gesture customization for personalized controls.  
